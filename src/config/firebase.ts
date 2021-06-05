@@ -1,9 +1,9 @@
 export default {
-  apiKey: 'AIzaSyCHAN3NKB8U0ntTlYz5NRTCH8KuQyqPONk',
-  authDomain: 'kp-react-firebase-auth.firebaseapp.com',
-  databaseURL: 'https://kp-react-firebase-auth.firebaseio.com',
-  projectId: 'kp-react-firebase-auth',
-  storageBucket: 'kp-react-firebase-auth.appspot.com',
-  messagingSenderId: '52910094821',
-  appId: '1:52910094821:web:044a8c5eeadb354603170c',
+  apiKey: process.env.REACT_API_KEY,
+  authDomain: process.env.REACT_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_DATABASE_URL,
+  projectId: process.env.REACT_PROJECT_ID,
+  storageBucket: process.env.REACT_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_ID,
 };

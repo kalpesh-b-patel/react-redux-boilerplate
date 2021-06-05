@@ -42,7 +42,7 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" className={classes.title}>
-            <Link to="/" className={classes.link}>Shopping Cart</Link>
+            <Link to="/" className={classes.link}>Boilerplate</Link>
           </Typography>
 
           <Box display="flex" flexDirection="row" gridGap={5} alignItems="center">
