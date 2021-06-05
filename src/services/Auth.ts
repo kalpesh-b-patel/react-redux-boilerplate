@@ -1,18 +1,18 @@
 import firebase from 'firebase';
 
-const app = firebase.initializeApp({
-  apiKey: 'AIzaSyCHAN3NKB8U0ntTlYz5NRTCH8KuQyqPONk',
-  authDomain: 'kp-react-firebase-auth.firebaseapp.com',
-  databaseURL: 'https://kp-react-firebase-auth.firebaseio.com',
-  projectId: 'kp-react-firebase-auth',
-  storageBucket: 'kp-react-firebase-auth.appspot.com',
-  messagingSenderId: '52910094821',
-  appId: '1:52910094821:web:044a8c5eeadb354603170c',
-});
+// const app = firebase.initializeApp({
+//   apiKey: process.env.REACT_API_KEY,
+//   authDomain: process.env.REACT_AUTH_DOMAIN,
+//   databaseURL: process.env.REACT_DATABASE_URL,
+//   projectId: process.env.REACT_PROJECT_ID,
+//   storageBucket: process.env.REACT_STORAGE_BUCKET,
+//   messagingSenderId: process.env.REACT_MESSAGING_SENDER_ID,
+//   appId: process.env.REACT_APP_ID,
+// });
 
 export const login = async (email: string, password: string) => {
   try {
-    const user = await app.auth().signInWithEmailAndPassword(email, password);
+    const user = await firebase.auth().signInWithEmailAndPassword(email, password);
     return {
       success: true,
       data: user,
@@ -28,7 +28,7 @@ export const login = async (email: string, password: string) => {
 export const loginWithGoogle = async () => {
   try {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const result = await app.auth().signInWithPopup(provider);
+    const result = await firebase.auth().signInWithPopup(provider);
     return {
       success: true,
       data: result.user,
@@ -46,7 +46,5 @@ export const loginWithGoogle = async () => {
 // };
 
 export const logout = () => {
-  app.auth().signOut();
+  firebase.auth().signOut();
 };
-
-export default app;
