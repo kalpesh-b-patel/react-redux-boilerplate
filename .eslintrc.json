@@ -20,6 +20,8 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-unused-vars": ["warn"],
+        "max-len": ["warn"],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
         "react/jsx-filename-extension": [
@@ -39,7 +41,8 @@
             }
          ],
         "react/jsx-props-no-spreading": "off",
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "react/prop-types": [2, { "ignore": ["children"] }]
     },
     "settings": {
         "react": {
