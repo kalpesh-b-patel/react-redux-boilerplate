@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography, Paper } from '@material-ui/core';
 import { AuthContext } from '../../components/AuthProvider';
 
 const Dashboard = () => {
   const user = useContext(AuthContext);
   return (
     <Container>
-      <Typography>
-        Welcome,
-        {' '}
-        { user?.email}
-        !
-      </Typography>
+	    <Paper>
+        <Typography>
+          Welcome,
+          {' '}
+          { user?.email}
+          !
+        </Typography>
+      </Paper>
     </Container>
   );
 };
